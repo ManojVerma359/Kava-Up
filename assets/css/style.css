@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none !important;
+}
+.cursor_pointer {
+  cursor: pointer;
+}
+.ff_poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+.l_h120 {
+  line-height: 120%;
+}
+.max_width {
+  max-width: 119px;
+}
+.gap_40 {
+  gap: 40px;
+}
+.py_23 {
+  padding: 23px 0px 23px 0px;
+}
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+.py_spacing {
+  padding: 100px 0px 140px 0px;
+}
+.max_w {
+  max-width: 109px;
+}
+.py_140 {
+  padding: 140px 0px 140px 0px;
+}
+.l_h32 {
+  line-height: 32px;
+}
+.l_h50 {
+  line-height: 50px;
+}
+.l_h36 {
+  line-height: 36px;
+}
+.max_wimg{
+  max-width: 903px;
+}
+.start_btn {
+  background: linear-gradient(97.1deg, #d0006f 4.95%, #0055b2 94.87%);
+  color: white;
+  padding: 20px 40px 20px 40px;
+  border: none;
+  border-radius: 50px;
+}
+.max_w24{
+    max-width: 24px;
+}
+p {
+    margin-bottom: 0 !important;
+}
+.img_width{
+    max-width: 734px;
+    max-height: 758px;
+}
+.hero_bgclr{
+    background: #D0006F24;
+    margin: 0px 70px 0px 70px;
+    border-radius: 30px;
+}
+.pt_20{
+  padding-top: 20px;
+}
+.w_577{
+  max-width: 577px;
+}
