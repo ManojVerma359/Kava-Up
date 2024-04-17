@@ -6,6 +6,9 @@
   list-style-type: none;
   text-decoration: none !important;
 }
+a:focus{
+  outline: none;
+}
 .cursor_pointer {
   cursor: pointer;
 }
@@ -43,9 +46,9 @@ ul {
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  border: none;
+  border: 3px solid #F8DBEB;
   outline: none;
-  background-color: #d0006f;
+  background-color: #ffff;
   color: white;
   cursor: pointer;
   padding: 12px;
