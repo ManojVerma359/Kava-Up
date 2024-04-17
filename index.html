@@ -7,44 +7,125 @@
     <title>Kava Up, Lcc</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/root.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="">
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img class="top_icon" src="./assets/image/top_icon.png"
+            alt=""></button>
     <!-- Section-1 -->
-    <header>
+    <header id="home" class="overflow-hidden">
         <div class="container">
             <nav class="d-flex align-items-center justify-content-between py_23">
                 <img class="cursor_pointer max_width" src="./assets/image/Logo.webp" alt="logo">
-                <ul class="d-flex align-items-center gap_40">
-                    <li><a class="fs_sm ff_poppins nav_textclr l_h120" href="">Home</a></li>
-                    <li><a class="fs_sm ff_poppins nav_textclr l_h120" href="">Apps</a></li>
-                    <li><a class="fs_sm ff_poppins nav_textclr l_h120" href="">Home</a></li>
-                    <li><a class="fs_sm ff_poppins nav_textclr l_h120" href="">Home</a></li>
-                    <li><a class="fs_sm ff_poppins nav_textclr l_h120" href="">Contact Us</a></li>
+                <ul id="navbar"
+                    class="d-flex align-items-center gap_40 flex-column flex-lg-row md_screen  overflow_hidden">
+                    <li><a class="fs_sm ff_poppins fw-medium nav_textclr l_h120 nav_clr" href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class=" d-flex align-items-center  drop gap-2 nav-icon">
+                            <p class="mb-0 fs_sm ff_poppins nav_textclr fw-medium l_h120 ">Apps</p>
+                            <p class=" mb-0 arrow_icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1479_1207)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.2931 8.29308C17.3853 8.19757 17.4957 8.12139 17.6177 8.06898C17.7397 8.01657 17.8709 7.98898 18.0037 7.98783C18.1365 7.98668 18.2681 8.01198 18.391 8.06226C18.5139 8.11254 18.6256 8.18679 18.7195 8.28069C18.8134 8.37458 18.8876 8.48623 18.9379 8.60913C18.9882 8.73202 19.0135 8.8637 19.0123 8.99648C19.0112 9.12926 18.9836 9.26048 18.9312 9.38249C18.8788 9.50449 18.8026 9.61483 18.7071 9.70708L12.7071 15.7071C12.5248 15.8893 12.2793 15.9942 12.0216 15.9998C11.7639 16.0054 11.514 15.9113 11.3241 15.7371L5.32407 10.2371C5.12861 10.0578 5.01237 9.8082 5.00093 9.54321C4.99527 9.41201 5.0155 9.28097 5.06048 9.15758C5.10546 9.03419 5.1743 8.92087 5.26307 8.82408C5.35185 8.7273 5.45881 8.64895 5.57787 8.5935C5.69692 8.53806 5.82573 8.5066 5.95694 8.50094C6.22193 8.4895 6.48061 8.58379 6.67607 8.76308L11.9701 13.6161L17.2931 8.29308Z"
+                                            fill="#848895" />
+                                    </g>
+                                </svg>
+
+                            </p>
+                        </a>
+                        <div class="dropdown-content ">
+                            <a href="https://en.wikipedia.org/wiki/Web_application#Development"
+                                class="under-hover  ff_poppins fs_xsm fw-normal nav_textclr">Web apps</a>
+                            <a href="https://en.wikipedia.org/wiki/Mobile_app"
+                                class="under-hover ff_poppins fs_xsm fw-normal  nav_textclr">Mobile
+                                apps</a>
+                            <a href="https://support.apple.com/en-in/guide/mac-help/mchl110b00b7/mac"
+                                class="under-hover  ff_poppins fs_xsm fw-normal nav_textclr">Mac & desktop
+                                apps</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class=" d-flex align-items-center drop gap-2 nav-icon">
+                            <p class="mb-0 fs_sm ff_poppins nav_textclr l_h120 fw-medium">Solutions</p>
+                            <p class=" mb-0 arrow_icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1479_1207)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.2931 8.29308C17.3853 8.19757 17.4957 8.12139 17.6177 8.06898C17.7397 8.01657 17.8709 7.98898 18.0037 7.98783C18.1365 7.98668 18.2681 8.01198 18.391 8.06226C18.5139 8.11254 18.6256 8.18679 18.7195 8.28069C18.8134 8.37458 18.8876 8.48623 18.9379 8.60913C18.9882 8.73202 19.0135 8.8637 19.0123 8.99648C19.0112 9.12926 18.9836 9.26048 18.9312 9.38249C18.8788 9.50449 18.8026 9.61483 18.7071 9.70708L12.7071 15.7071C12.5248 15.8893 12.2793 15.9942 12.0216 15.9998C11.7639 16.0054 11.514 15.9113 11.3241 15.7371L5.32407 10.2371C5.12861 10.0578 5.01237 9.8082 5.00093 9.54321C4.99527 9.41201 5.0155 9.28097 5.06048 9.15758C5.10546 9.03419 5.1743 8.92087 5.26307 8.82408C5.35185 8.7273 5.45881 8.64895 5.57787 8.5935C5.69692 8.53806 5.82573 8.5066 5.95694 8.50094C6.22193 8.4895 6.48061 8.58379 6.67607 8.76308L11.9701 13.6161L17.2931 8.29308Z"
+                                            fill="#848895" />
+                                    </g>
+                                </svg>
+
+                            </p>
+                        </a>
+                        <div class="dropdown-content ">
+                            <a href="https://jain.software/?gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJQh73iySrNgE08t6nQcX_55fB3mYkqYYGBSi6ChsoMD_XMRFEz2hHBoC3RUQAvD_BwE"
+                                class="under-hover  ff_poppins fs_xsm fw-normal nav_textclr">Web & mobile
+                                application services</a>
+                            <a href="https://www.siftforanswers.com/web?adid=674783387187&agid=154198481175&campaignid=20570889042&clid=amg-siftforanswers&ct=10141&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJROFhBn1ehC3BiNktZvfFHEm2GFAP0Hd3LEu5Cpk1TDUSbm94FdJyBoCx0gQAvD_BwE&kwid=kwd-405227011155&o=1673989&q=ui+ux+certification+course&rch=intl1&utm_medium=gcpc&utm_source=g&qo=semQuery&ag=fw4&an=google_s&tt=rmd&ad=semA&akid=1_20570889042_154198481175_kwd-405227011155_g_9050499"
+                                class="under-hover ff_poppins fs_xsm fw-normal  nav_textclr">UI/UX
+                                design</a>
+                            <a href="https://www.figma.com/resource-library/what-is-prototyping/"
+                                class="under-hover  ff_poppins fs_xsm fw-normal nav_textclr">Prototyping</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class=" d-flex align-items-center drop gap-2 nav-icon">
+                            <p class="mb-0 fs_sm ff_poppins nav_textclr l_h120 nav_clr fw-medium">Services</p>
+                            <p class=" mb-0 arrow_icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_1479_1207)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.2931 8.29308C17.3853 8.19757 17.4957 8.12139 17.6177 8.06898C17.7397 8.01657 17.8709 7.98898 18.0037 7.98783C18.1365 7.98668 18.2681 8.01198 18.391 8.06226C18.5139 8.11254 18.6256 8.18679 18.7195 8.28069C18.8134 8.37458 18.8876 8.48623 18.9379 8.60913C18.9882 8.73202 19.0135 8.8637 19.0123 8.99648C19.0112 9.12926 18.9836 9.26048 18.9312 9.38249C18.8788 9.50449 18.8026 9.61483 18.7071 9.70708L12.7071 15.7071C12.5248 15.8893 12.2793 15.9942 12.0216 15.9998C11.7639 16.0054 11.514 15.9113 11.3241 15.7371L5.32407 10.2371C5.12861 10.0578 5.01237 9.8082 5.00093 9.54321C4.99527 9.41201 5.0155 9.28097 5.06048 9.15758C5.10546 9.03419 5.1743 8.92087 5.26307 8.82408C5.35185 8.7273 5.45881 8.64895 5.57787 8.5935C5.69692 8.53806 5.82573 8.5066 5.95694 8.50094C6.22193 8.4895 6.48061 8.58379 6.67607 8.76308L11.9701 13.6161L17.2931 8.29308Z"
+                                            fill="#848895" />
+                                    </g>
+                                </svg>
+
+                            </p>
+                        </a>
+                        <div class="dropdown-content ">
+                            <a href="https://eaio.com.tr/?gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJW-idOj5Y8E73yCAPviP9soxy8o53_a3ZsxaiRMbaGqha-2D-ZjBOhoCcR0QAvD_BwE"
+                                class="under-hover  ff_poppins fs_xsm fw-normal nav_textclr">We're a
+                                Full-Service Agency </a>
+                            <a href="https://www.familyempowermentmedia.org/vacancies?gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJZgr4F10QiSc-EyMpBL2ZxG9-OumrqYCICzyiH4ckKvoLOSQ5Xgd0RoCJuEQAvD_BwE"
+                                class="under-hover ff_poppins fs_xsm fw-normal  nav_textclr">We're a
+                                100% Remote Company</a>
+                            <a href="#learn" class="under-hover  ff_poppins fs_xsm fw-normal nav_textclr">Service</a>
+                        </div>
+                    </li>
+
+                    <li><a class="fs_sm ff_poppins nav_textclr l_h120 nav_clr fw-medium" href="">Contact Us</a></li>
                 </ul>
+                <div id="menubtn-icon" onclick="openNav()" class="d-lg-none z-3 pe-2 cursor_pointer">
+                    <div class="line1"></div>
+                    <div class="line2 my-2"></div>
+                    <div class="line3"></div>
+                </div>
             </nav>
 
         </div>
         <div class="hero_bgclr mt-3">
             <div class="container">
                 <div class="row align-items-center justify-content-center">
-                    <div class="col-7">
-                        <h1 class="fs_2xl fw-semibold l_h120 ff_poppins">Custom <span
+                    <div class="col-lg-7 pt-lg-0 pt-3" data-aos="fade-right">
+                        <h1 class="fs_2xl fw-semibold l_h120 ff_poppins text-sm-start text-center ">Custom <span
                                 class="ff_poppins primary_clr">software development</span> from concept to completion
                             accelerate growth through interactive app development</h1>
-                        <div class="pt-5 d-flex align-items-center gap-4 ">
+                        <div class="pt-md-5 pt-3 d-flex align-items-center gap-sm-4 gap-2 ">
                             <button class="start_btn fs_sm ff_poppins l_h120 fw-medium">Start Now</button>
-                            <div class="d-flex align-items-center gap-3 cursor_pointer">
+                            <div class="d-flex align-items-center  cursor_pointer try_btn">
                                 <p class="fs_sm fw-medium ff_poppins l_h120 nav_textclr">Try it for free</p>
                                 <img class="max_w24" src="./assets/image/arrows.webp" alt="arrow">
                             </div>
 
                         </div>
                     </div>
-                    <div class="col-5 pb-4">
-                        <img class="img_width" src="./assets/image/hero_jimg.webp" alt="hero_img">
+                    <div class="col-lg-5 pb-4 pt-lg-0 pt-2"data-aos="fade-left">
+                        <img class="img_width w_100" src="./assets/image/hero_jimg.webp" alt="hero_img">
                     </div>
 
                 </div>
@@ -54,27 +135,33 @@
         </div>
     </header>
     <!-- Section-2 -->
-    <section>
+    <section class="overflow-hidden">
         <div class="container py_spacing">
             <p class="text-center ff_poppins fw-medium fs_md dark_black">Our Trusted Partners</p>
-            <div class="row justify-content-between mt-5">
-                <div class="col-2 d-flex justify-content-center">
-                    <img class="max_w cursor_pointer" src="./assets/image/img_1.webp" alt="">
+            <div class="row justify-content-between mt-sm-5 mt-4">
+                <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center">
+                    <a href="https://slack.com/intl/en-in"> <img class="max_w img_hover cursor_pointer"
+                            src="./assets/image/img_1.webp" alt=""></a>
                 </div>
-                <div class="col-2 d-flex justify-content-center">
-                    <img class="w-100 max_w cursor_pointer" src="./assets/image/img_2.webp" alt="">
+                <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center">
+                    <a href="https://www.netflix.com/in/"><img class="w-100 max_w img_hover cursor_pointer"
+                            src="./assets/image/img_2.webp" alt=""></a>
                 </div>
-                <div class="col-2 d-flex justify-content-center">
-                    <img class="w-100 max_w cursor_pointer" src="./assets/image/img_3.webp" alt="">
+                <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center pt-sm-0 pt-5">
+                    <a href="https://www.fitbit.com/global/in/home"><img class="w-100 max_w cursor_pointer img_hover"
+                            src="./assets/image/img_3.webp" alt=""></a>
                 </div>
-                <div class="col-2 d-flex justify-content-center">
-                    <img class="w-100 max_w cursor_pointer" src="./assets/image/img_4.webp" alt="">
+                <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center pt-md-0 pt-5">
+                    <a href="https://www.google.com/"> <img class="w-100 max_w cursor_pointer img_hover"
+                            src="./assets/image/img_4.webp" alt=""></a>
                 </div>
-                <div class="col-2 d-flex justify-content-center">
-                    <img class="w-100 max_w cursor_pointer" src="./assets/image/img_5.webp" alt="">
+                <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center pt-md-0 pt-5">
+                    <a href="https://www.airbnb.co.in/"> <img class="w-100 max_w cursor_pointer img_hover"
+                            src="./assets/image/img_5.webp" alt="img"></a>
                 </div>
-                <div class="col-2 d-flex justify-content-center">
-                    <img class="w-100 max_w cursor_pointer" src="./assets/image/img_6.webp" alt="">
+                <div class="col-md-2 col-sm-4 col-6 d-flex justify-content-center pt-md-0 pt-5">
+                    <a href="https://www.uber.com/in/en/"> <img class="w-100 max_w cursor_pointer img_hover"
+                            src="./assets/image/img_6.webp" alt="img"></a>
                 </div>
 
             </div>
@@ -82,19 +169,19 @@
         </div>
     </section>
     <!-- Section-3 -->
-    <section>
+    <section class="overflow-hidden">
         <div class="container ">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-6">
+            <div class="row align-items-center justify-content-between column_reverse">
+                <div class="col-lg-6 pt-lg-0 pt-sm-4 pt-2"data-aos="fade-right">
                     <img class="w-100" src="./assets/image/sec2_img.webp" alt="img">
                 </div>
-                <div class="col-5">
+                <div class="col-lg-5"data-aos="fade-left">
                     <h3 class="ff_poppins fw-semibold fs_xl we_txtclr l_h120">Who we are </h3>
-                    <p class="ff_poppins fs_sm fw-normal para_clr pt-4">Kava Up, LLC is a US-based digital creative
+                    <p class="ff_poppins fs_sm fw-normal para_clr pt-sm-4">Kava Up, LLC is a US-based digital creative
                         studio delivering ROI-focused web and mobile app development. We've helped startups, small
                         businesses, enterprises, and everyone in between build and scale with our client-focused
                         development approach. </p>
-                    <button class="start_btn fs_sm ff_poppins l_h120 fw-medium mt-5">Contact Us</button>
+                    <button class="start_btn fs_sm ff_poppins l_h120 fw-medium mt-xl-5 mt-3">Contact Us</button>
                 </div>
             </div>
 
@@ -102,34 +189,37 @@
         </div>
     </section>
     <!-- Section-4 -->
-    <section>
+    <section class="overflow-hidden">
         <div class="container py_140">
             <div class="row align-items-center justify-content-between ">
-                <div class="col-6">
+                <div class="col-lg-6"data-aos="fade-right">
                     <h3 class="ff_poppins fw-semibold fs_xl we_txtclr l_h120">What we do </h3>
 
-                    <div class="d-flex align-items-center gap-3 pt-4">
+                    <div class="d-flex align-items-center gap-sm-3 gap-2 pt-sm-4 pt-2">
                         <img src="./assets/image/svg/setting_icon.svg" alt="icon">
-                        <p class="ff_poppins fw-medium fs_ms blue_clr l_h32">We're a Full-Service Agency </p>
+                        <p class="ff_poppins fw-medium fs_ms blue_clr l_h32 cursor_pointer">We're a Full-Service Agency
+                        </p>
 
                     </div>
-                    <p class="fs_sm fw-normal ff_poppins para_clr l_h32 pt-3">We craft digital experiences that bring
+                    <p class="fs_sm fw-normal ff_poppins para_clr l_h32 pt-sm-3 pt-2">We craft digital experiences that
+                        bring
                         strategic value. From simple apps to out-of-the-box, custom software, our team can help. Our
                         solutions have an intelligent client interface that provides insight and allows for content
                         manipulation. </p>
-                    <div class="d-flex align-items-center gap-3 pt-4">
+                    <div class="d-flex align-items-center gap-sm-3 gap-2 pt-sm-4 pt-2">
                         <img src="./assets/image/svg/prmot_icon.svg" alt="icon">
-                        <p class="ff_poppins fw-medium fs_ms blue_clr l_h32">We're a 100% Remote Company </p>
+                        <p class="ff_poppins fw-medium fs_ms blue_clr l_h32 cursor_pointer">We're a 100% Remote Company
+                        </p>
 
                     </div>
                     <p class="fs_sm fw-normal ff_poppins para_clr l_h32 pt-3">Talent isn't restricted to borders. Our
                         team
                         is dispersed throughout the US. </p>
-                    <button class="start_btn fs_sm ff_poppins l_h120 fw-medium mt-5">Contact Us</button>
+                    <button class="start_btn fs_sm ff_poppins l_h120 fw-medium mt-xl-5 mt-3">Contact Us</button>
 
                 </div>
-                <div class="col-6">
-                    <img class="max_wimg" src="./assets/image/agncy_img.webp" alt="img">
+                <div class="col-lg-6 pt-lg-0 pt-3"data-aos="fade-left">
+                    <img class="max_wimg w_100" src="./assets/image/agncy_img.webp" alt="img">
                 </div>
 
             </div>
@@ -138,53 +228,64 @@
         </div>
     </section>
     <!-- Section-5 -->
-    <section class="bg_clr">
+    <section class="bg_clr overflow-hidden">
         <div class="container d-flex flex-column justify-content-center align-items-center py_140">
             <h4 class="ff_poppins fs_xl fw-semibold l_h120 dark_black">Our process</h4>
-            <p class="ff_poppins fw-semibold fs_md l_h32 nav_textclr pt-4">Working With the Kava Up Team
+            <p class="ff_poppins fw-semibold fs_md l_h32 nav_textclr pt-sm-4 pt-2">Working With the Kava Up Team
             </p>
             <p class="ff_poppins fs_sm l_h32 para_clr text-center pt_20">Every new project begins with a free
-                consultation to see if Kava Up is the best fit <span class="d-block ff_poppins">for you. Then, we'll
+                consultation to see if Kava Up is the best fit <span class="d-lg-block ff_poppins">for you. Then, we'll
                     design, develop, scale, and publish captivating, user-friendly</span> apps if we vibe. We enjoy
-                working closely with our clients to foster open, <span class="d-block ff_poppins">transparent
+                working closely with our clients to foster open, <span class="d-lg-block ff_poppins">transparent
                     communication.</span></p>
             <p class="ff_poppins fs_sm l_h32 para_clr text-center pt_20">Once we're finished with your web or mobile
-                app, we provide a web-based <span class="d-block ff_poppins">content manager to make quick, easy updates
+                app, we provide a web-based <span class="d-lg-block ff_poppins">content manager to make quick, easy
+                    updates
                     in the app. We also host and</span> provide ongoing support for our clients.
             </p>
         </div>
     </section>
     <!-- Sectin-6 -->
-    <section>
+    <section class="overflow-hidden">
         <div class="container">
             <div class="row justify-content-between py_140 align-items-center">
-                <div class="col-6">
+                <div class="col-lg-6"data-aos="fade-right">
                     <img class="w_577 w-100" src="./assets/image/order_img.webp" alt="#">
                 </div>
-                <div class="col-6">
+                <div class="col-lg -6"data-aos="fade-left">
                     <h5 class="ff_poppins fs_xl fw-semibold l_h120 dark_black">How we can help</h5>
-                    <p class="fs_md ff_poppins l_h32 fw-semibold nav_textclr pt-4">We Build Scalable Solutions</p>
+                    <p class="fs_md ff_poppins l_h32 fw-semibold nav_textclr pt-sm-4 pt-2">We Build Scalable Solutions
+                    </p>
                     <div class="d-flex gap-3 align-items-center pt_20">
                         <img src="./assets/image/svg/icon_1.svg" alt="#">
-                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr" href="">Web & mobile application
+                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr"
+                            href="https://jain.software/?gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJQh73iySrNgE08t6nQcX_55fB3mYkqYYGBSi6ChsoMD_XMRFEz2hHBoC3RUQAvD_BwE">Web
+                            & mobile application
                             services</a>
                     </div>
                     <div class="d-flex gap-3 align-items-center pt-3">
                         <img src="./assets/image/svg/icon_2.svg" alt="#">
-                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr" href="">Prototyping</a>
+                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr"
+                            href="https://www.figma.com/resource-library/what-is-prototyping/">Prototyping</a>
                     </div>
                     <div class="d-flex gap-3 align-items-center pt-3">
                         <img src="./assets/image/svg/icon_3.svg" alt="#">
-                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr" href="">UI/UX design</a>
+                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr"
+                            href="https://www.siftforanswers.com/web?adid=674783387187&agid=154198481175&campaignid=20570889042&clid=amg-siftforanswers&ct=10141&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJROFhBn1ehC3BiNktZvfFHEm2GFAP0Hd3LEu5Cpk1TDUSbm94FdJyBoCx0gQAvD_BwE&kwid=kwd-405227011155&o=1673989&q=ui+ux+certification+course&rch=intl1&utm_medium=gcpc&utm_source=g&qo=semQuery&ag=fw4&an=google_s&tt=rmd&ad=semA&akid=1_20570889042_154198481175_kwd-405227011155_g_9050499">UI/UX
+                            design</a>
                     </div>
                     <div class="d-flex gap-3 align-items-center pt-3">
                         <img src="./assets/image/svg/icon_4.svg" alt="#">
-                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr" href="">Android / iOS mobile
+                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr"
+                            href="https://aws.amazon.com/pm/amplify/?gclid=CjwKCAjw5v2wBhBrEiwAXDDoJVM--PedVkSHZfyloFr5PPzn6LlL3lpiW51TsbJ_YiVZgMifGYc4ghoCIksQAvD_BwE&trk=cb553a54-bf63-4a7c-9f79-709c839223b2&sc_channel=ps&ef_id=CjwKCAjw5v2wBhBrEiwAXDDoJVM--PedVkSHZfyloFr5PPzn6LlL3lpiW51TsbJ_YiVZgMifGYc4ghoCIksQAvD_BwE:G:s&s_kwcid=AL!4422!3!647301985087!p!!g!!android%20app%20development!19621397246!144281892846">Android
+                            / iOS mobile
                             development</a>
                     </div>
                     <div class="d-flex gap-3 align-items-center pt-3">
                         <img src="./assets/image/svg/icon_5.svg" alt="#">
-                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr" href="">Complex web backend and frontend
+                        <a class="ff_poppins fs_sm fw-normal l_h32 para_clr"
+                            href="https://astream.in/website-design-service/?gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJZivEX7t-gkA3Lii-0cMEIlj7MvtCOuBGbiaM8ybu3EViiJjzi9NtBoCkEUQAvD_BwE">Complex
+                            web backend and frontend
                             projects.</a>
                     </div>
                     <p class="fs_ms ff_poppins fw-medium l_h32 blue_clr pt-4">Need more help? We also provide database
@@ -197,32 +298,188 @@
 
         </div>
     </section>
+
     <!-- Section-7 -->
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <img class="w-100" src="./assets/image/phn_img1.webp" alt="ohn_img">
+    <section class="bg_clr1 overflow-hidden">
+        <div class="container bg_clr max_h overflow-hidden">
+            <div class="row   justify-content-center column_reverse">
+                <div class="col-lg-5  pt-3 mt-lg-2 h_425 d-flex justify-content-center ">
+                    <img class="w-100 h-100 phn_w" src="./assets/image/phn_imgs.webp" alt="ohn_img">
                 </div>
-                <div class="col-6">
-                    <h6 class="ff_poppins fw-semibold  fs_lg nav_textclr l_h50">Take the Next Step in Your Digital Transformation
+                <div class="col-lg-6 ptb_spacing">
+                    <h6 class="ff_poppins fw-semibold  fs_lg nav_textclr l_h50">Take the Next Step in Your<span
+                            class="d-lg-block ff_poppins"> Digital
+                            Transformation</span>
                     </h6>
-                    <p class="nav_textclr ff_poppins fs_sm fw-normal l_h36 pt-4">Concentrate on your brand, business, or project while we handle the software development. 
+                    <p class="nav_textclr ff_poppins fs_sm fw-normal l_h36 pt-sm-4 pt-1">Concentrate on your brand,
+                        business, or
+                        project while we <span class="d-lg-block ff_poppins">handle the software development.</span>
                     </p>
-                    <p class="ff_poppins fs_sm l_h36 fw-medium blue_clr pt-3 pb-1">Get in touch with Kava Up to learn more!
+                    <p class="ff_poppins fs_sm l_h36 fw-medium blue_clr pt-3 pb-1 cursor_pointer">Get in touch with Kava
+                        Up to learn
+                        more!
                     </p>
-                    <button class="start_btn fs_sm ff_poppins l_h120 fw-medium mt-4">Contact Us</button>
+                    <button class="start_btn fs_sm ff_poppins l_h120 fw-medium mt-sm-4 mt-2">Contact Us</button>
 
                 </div>
-            
+
 
             </div>
 
         </div>
     </section>
+    <!-- Footer -->
+    <footer class="overflow-hidden">
+        <div class="container pt_130">
+            <div class="row justify-content-between">
+                <div class="col-lg-2 col-6">
+                    <ul>
+                        <li class="ff_poppins fw-semibold fs_md nav_textclr">
+                            Company</li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="#home"> Home</li></a>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href=""> Solutions</li></a>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">Apps</a> </li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">Services </a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-6">
+                    <ul>
+                        <li> <a class="ff_poppins fw-semibold fs_md nav_textclr" href="">Product</a></li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">Web apps</a> </li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">Mobile apps</a> </li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">Mac & desktop apps</a> </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <ul>
+                        <li> <a class="ff_poppins fw-semibold fs_md nav_textclr" href="">Contact</a></li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">info@kava.com</a> </li>
+                        <li><a class="ff_poppins fs_sm fw-normal footer_clr l_h40" href="">1234, Lorem ipsum dolor sit
+                                amet, consectetuer.</a> </li>
+
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <ul>
+                        <li> <a class="ff_poppins fw-semibold fs_md nav_textclr" href="">Get in touch</a></li>
+                        <div class=" input_btn d-flex justify-content-between mt-3">
+                            <input class="bg-transparent border-0 outline_none w-100 ff_poppins fs_xsm" type="text"
+                                placeholder="Your email address">
+                            <span><img class="bg_iconclr  border_radius cursor_pointer"
+                                    src="./assets/image/svg/submit_arrow.svg" alt="arrow"></span>
+                        </div>
+                    </ul>
+                    <div class="d-flex gap_16 pt_64">
+                        <span><a class="icon" href="https://facebook.com/?lang=en"><span>
+                                    <svg class="fill_clr" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9.33073 0.666992H6.83073C5.72566 0.666992 4.66585 1.10598 3.88445 1.88738C3.10305 2.66878 2.66406 3.72859 2.66406 4.83366V7.33366H0.164062V10.667H2.66406V17.3337H5.9974V10.667H8.4974L9.33073 7.33366H5.9974V4.83366C5.9974 4.61265 6.08519 4.40068 6.24147 4.2444C6.39775 4.08812 6.60972 4.00033 6.83073 4.00033H9.33073V0.666992Z"
+                                            fill="#4A494E" />
+                                    </svg>
+
+
+                            </a></span>
+                        <span><a class="icon" href="https://youtube.com/?lang=en">
+                                <svg class="fill_clr1" width="19" height="14" viewBox="0 0 19 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.16452 6.79762H1.16458L1.16453 6.7864C1.15759 5.38208 1.27835 3.98007 1.52532 2.59767C1.58389 2.38386 1.69555 2.18812 1.85012 2.02877C2.0098 1.86416 2.20967 1.74413 2.42992 1.68053C2.68739 1.61304 3.22192 1.54604 3.96176 1.49208C4.68043 1.43966 5.51545 1.40424 6.31507 1.38048C7.1131 1.35677 7.86789 1.34489 8.42367 1.33894C8.70137 1.33597 8.9289 1.33449 9.08674 1.33375L9.26868 1.3331L9.31579 1.33302L9.32757 1.33301L9.33042 1.33301L9.33107 1.33301H9.33121H9.33135L9.33201 1.33301L9.33488 1.33301L9.34671 1.33302L9.39393 1.33309L9.57608 1.33368C9.73407 1.33436 9.96178 1.33571 10.2397 1.33843C10.7958 1.34386 11.5512 1.35472 12.3499 1.37639C13.1501 1.3981 13.9865 1.43048 14.7069 1.47845C15.4366 1.52704 15.9736 1.58757 16.2426 1.65017C16.4589 1.7145 16.6551 1.83335 16.8123 1.99544C16.9669 2.1548 17.0785 2.35054 17.1371 2.56436C17.386 3.95727 17.5068 5.37007 17.4979 6.78506L17.4978 6.78506L17.4979 6.79493C17.5029 8.18857 17.3821 9.5798 17.1371 10.9517C17.0785 11.1655 16.9669 11.3612 16.8123 11.5206C16.6526 11.6852 16.4528 11.8052 16.2325 11.8688C15.975 11.9363 15.4405 12.0033 14.7006 12.0573C13.982 12.1097 13.147 12.1451 12.3473 12.1689C11.5493 12.1926 10.7945 12.2045 10.2387 12.2104C9.96104 12.2134 9.73351 12.2149 9.57567 12.2156L9.39373 12.2162L9.34662 12.2163L9.33484 12.2163L9.33199 12.2163H9.33134H9.33121H9.33107H9.33042L9.32757 12.2163L9.31579 12.2163L9.26868 12.2162L9.08674 12.2156C8.9289 12.2149 8.70137 12.2134 8.42367 12.2104C7.86789 12.2045 7.1131 12.1926 6.31507 12.1689C5.51545 12.1451 4.68043 12.1097 3.96176 12.0573C3.21785 12.003 2.68151 11.9356 2.4257 11.8677C2.20836 11.8077 2.01004 11.6929 1.84976 11.5343C1.69903 11.3851 1.58672 11.2019 1.52212 11.0004C1.27538 9.61328 1.15567 8.20654 1.16452 6.79762Z"
+                                        stroke="#4A494E" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M7.45703 9.51641L12.2487 6.79141L7.45703 4.06641V9.51641Z" stroke="#4A494E"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+
+                            </a></span>
+                        <span><a class="icon" href="https://twitter.com/?lang=en">
+                                <svg class="fill_clr1" width="19" height="16" viewBox="0 0 19 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1262 2.43083C15.3843 2.72762 15.7924 2.84553 16.1691 2.73212C16.1713 2.73143 16.1736 2.73075 16.1759 2.73006C16.1385 2.76921 16.1005 2.80783 16.0619 2.84592C15.8242 3.0803 15.7192 3.41781 15.7818 3.74567C15.8137 3.91234 15.8301 4.0816 15.8307 4.25128C15.8302 8.69211 13.7256 11.7789 10.84 13.3148C8.87504 14.3607 6.50137 14.7116 4.09751 14.2353C4.96289 13.9311 5.79077 13.5151 6.55903 12.9936C6.85945 12.7897 7.02573 12.439 6.99343 12.0773C6.96113 11.7156 6.73534 11.3999 6.40353 11.2524C4.68844 10.4902 3.65227 9.51933 3.02711 8.53225C2.39793 7.5388 2.14659 6.46752 2.10053 5.45418C2.06582 4.69053 2.14852 3.9716 2.26747 3.36834C2.97331 4.04376 3.778 4.61328 4.65698 5.0557C6.11283 5.78848 7.72732 6.14984 9.35665 6.10759C9.89865 6.09353 10.3307 5.65011 10.3307 5.10792V4.27459H10.3308L10.3306 4.26119C10.3231 3.7013 10.4878 3.15262 10.8022 2.68935C11.1167 2.22607 11.5659 1.87056 12.0891 1.6709C12.6122 1.47123 13.184 1.43704 13.7272 1.57296C14.2704 1.70887 14.7587 2.00833 15.1262 2.43083Z"
+                                        stroke="#4A494E" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+
+
+                            </a></span>
+                        <span><a class="icon" href="https://instagram.com/?lang=en">
+                                <svg class="fill_clr1" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.16667 2.66699H14.5C16.2489 2.66699 17.6667 4.08476 17.6667 5.83366V14.167C17.6667 15.9159 16.2489 17.3337 14.5 17.3337H6.16667C4.41776 17.3337 3 15.9159 3 14.167V5.83366C3 4.08476 4.41776 2.66699 6.16667 2.66699Z"
+                                        stroke="#4A494E" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M13.6658 9.47525C13.7686 10.1688 13.6502 10.8771 13.3272 11.4994C13.0043 12.1218 12.4934 12.6264 11.8671 12.9416C11.2409 13.2569 10.5311 13.3666 9.83893 13.2552C9.14671 13.1438 8.50724 12.817 8.01147 12.3212C7.5157 11.8255 7.18888 11.186 7.07749 10.4938C6.96611 9.80155 7.07583 9.09183 7.39104 8.46556C7.70626 7.8393 8.21093 7.32837 8.83326 7.00545C9.45559 6.68254 10.1639 6.56407 10.8574 6.66692C11.5649 6.77182 12.2198 7.10147 12.7255 7.60717C13.2312 8.11288 13.5609 8.76782 13.6658 9.47525Z"
+                                        stroke="#4A494E" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M14.9141 5.41699H14.9224" stroke="#4A494E" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+
+
+
+                            </a></span>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <hr class="lines mt-5">
+            <div class="mb-4 d-flex justify-content-between flex-sm-nowrap flex-wrap">
+                <img class="cursor_pointer footer_logo" src="./assets/image/Logo.webp" alt="#">
+                <p class="ff_poppins fs_sm fw-normal year_para pt-2 pt-sm-0">Copyright© <span id="demo"></span> kava up,
+                    LLC</p>
+            </div>
+
+
+        </div>
+    </footer>
+    <script>
+        function openNav() {
+            document.getElementById("navbar").classList.toggle("end-0");
+            document.body.classList.toggle("overflow_hidden");
+            document.getElementById("menubtn-icon").classList.toggle("cross")
+        }
+    </script>
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+        let mybutton = document.getElementById("myBtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+        AOS.init(
+            );
+    </script>
 </body>
 
 </html>
