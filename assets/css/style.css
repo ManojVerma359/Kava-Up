@@ -228,7 +228,7 @@ p {
     width: 100%;
     min-height: 100vh;
     background-color: #faf8ed;
-    transition: 600ms linear;
+    transition: 200ms linear;
     display: flex;
     align-items: center;
     justify-content: center;
