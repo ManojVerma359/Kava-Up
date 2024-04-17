@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +36,6 @@ ul {
 .top_icon{
   max-width: 30px;
 }
-
 #myBtn {
   display: none;
   position: fixed;
@@ -53,7 +51,6 @@ ul {
   padding: 12px;
   border-radius: 30px;
 }
-
 #myBtn:hover {
   background-color: #F8DBEB;
 }
@@ -78,7 +75,6 @@ ul {
 .l_h40 {
   line-height: 40px;
 }
-
 .start_btn {
   background: linear-gradient(97.1deg, #d0006f 4.95%, #0055b2 94.87%);
   color: white;
@@ -86,12 +82,10 @@ ul {
   border: none;
   border-radius: 50px;
   transition: all 300ms linear;
-
 }
 .start_btn:hover{
   background: linear-gradient(67.1deg, #d0006f 4.45%, #0055b2 64.87%);
-  transition: all 300ms linear;
-  
+  transition: all 300ms linear;  
 }
 .max_w24 {
   max-width: 24px;
@@ -102,7 +96,6 @@ p {
 .w_100 {
   max-width: 100%;
 }
-
 .hero_bgclr {
   background: #d0006f24;
   margin: 0px 70px 0px 70px;
@@ -140,7 +133,6 @@ p {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   flex-direction: column;
@@ -151,15 +143,12 @@ p {
   padding: 12px 14px;
   z-index: 1;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
 .arrow {
   transition: all linear 300ms;
 }
-
 .dropdown:hover svg {
   transform: rotate(180deg);
 }
@@ -212,11 +201,9 @@ p {
 .try_btn:hover{
   gap: 20px;
   transition: all 300ms linear;
-
 }
 .img_hover{
   transition: all 300ms linear;
-
 }
 .img_hover:hover{
   transform: scale(1.2);
@@ -247,11 +234,9 @@ p {
     justify-content: center;
     z-index: 1;
   }
-
   .overflow_hidden {
     overflow: hidden;
   }
-
   .line1,
   .line2,
   .line3 {
@@ -261,16 +246,13 @@ p {
     transition: 300ms linear;
     cursor: pointer;
   }
-
   .cross .line1 {
     transform: rotate(49deg) translate(18px, 16px);
   }
-
   .cross .line2 {
     transform: translateX(-50%);
     opacity: 0;
   }
-
   .cross .line3 {
     transform: rotate(-45deg) translateY(-13%);
   }
@@ -285,7 +267,6 @@ p {
     margin: 0px;
     border-radius: 30px;
   }
-
   .overflow_hidden {
     overflow: hidden;
   }
