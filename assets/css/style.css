@@ -116,6 +116,7 @@ p {
 }
 .phn_w {
   max-width: 315px;
+  transform: translateY(10px);
 }
 .input_btn {
   max-width: 234px;
