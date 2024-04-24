@@ -296,6 +296,9 @@ p {
   .pt_130 {
     padding-top: 70px;
   }
+  #myBtn {
+    padding: 6px;
+  }
 }
 
 @media (max-width: 576px) {
