@@ -94,4 +94,7 @@
     --fs-xl: 35px;
     --fs-2xl: 25px;
   }
+  .fs_24{
+    font-size: 24px;
+  }
 }

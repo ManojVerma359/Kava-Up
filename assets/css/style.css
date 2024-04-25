@@ -354,7 +354,8 @@ p {
 }
 .phn_w {
   max-width: 315px;
-  transform: translateY(15px);
+  max-height: 300px;
+  transform: translateY(12px);
 }
 }
 
